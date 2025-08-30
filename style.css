@@ -1,0 +1,212 @@
+:root {
+    --white: #EFFFFB;
+    --green: #50D890;
+    --blue: #4F98CA;
+    --blue-2: #0046FF;
+    --black: #272727;
+    --gray: #C9CDCF;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    max-width: 1240px;
+    background: var(--black);
+    color: var(--white);
+}
+
+.center_vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center_horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+label {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.primary-btn {
+    background: var(--green);
+}
+
+.secondary-btn {
+    background: var(--blue);
+}
+
+button {
+    padding: 6px 12px;
+    text-transform: capitalize;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 10px 8px;
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style: none;
+
+    li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p {
+            text-transform: capitalize;
+            font-size: 12px;
+
+            span {
+                color: var(--blue-2);
+            }
+        }
+    }
+}
+
+.header-section {
+    padding: 24px 0;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.main-section.center_horizontal {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    .input-section.center_vertical {
+        border: 1px solid var(--gray);
+        border-radius: 5px;
+        align-items: flex-start;
+        padding: 12px 16px;
+        gap: 12px;
+
+        textarea {
+            width: 300px;
+            height: 200px;
+        }
+
+        .list_of_candidate,.remaining_members {
+            width: 100%;
+            max-height: 150px;
+            border: 1px solid var(--gray);
+
+            ul {
+                width: 100%;
+                max-width: 300px;
+                max-height: inherit;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                scrollbar-width: thin;
+                scrollbar-color: #888 transparent;
+                -ms-overflow-style: none;
+
+                li {
+                    border: 1px solid var(--gray);
+                    border-bottom: .5px solid var(--gray);
+                    padding: 8px 12px;
+                    text-transform: capitalize;
+                }
+            }
+
+            ul::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            ul::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            ul::-webkit-scrollbar-thumb {
+                background-color: #888;
+                border-radius: 4px;
+            }
+
+            ul::-webkit-scrollbar-thumb:hover {
+                background-color: #555;
+            }
+        }
+    }
+
+    .display-section.center_vertical {
+        width: auto;
+        height: 100%;
+        border-radius: 5px;
+        border: 1px solid var(--gray);
+        border-radius: 5px;
+        align-items: flex-start;
+        padding: 12px 16px;
+        gap: 12px;
+
+        .group {
+            width: 100%;
+
+            #outputDisplay {
+                padding: 12px 0;
+                font-size: 18px;
+            }
+        }
+
+        .list_of_winner {
+            ul {
+                border: 1px solid var(--gray);
+                padding: 10px 8px;
+
+                li {
+                    border: 1px solid var(--gray);
+                    padding: 12px 8px;
+
+                    p {
+                        letter-spacing: 1pt;
+                        span{
+                            color:var(--blue)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .main-section.center_horizontal {
+        max-width: 400px;
+        flex-direction: column;
+        align-items: center;
+    }
+}

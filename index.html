@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="center_vertical">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffle Draw App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="center_vertical">
+    <div class="header-section center_vertical">
+        <h1>JavaScript Project 01</h1>
+        <h2>Raffle Draw Application</h2>
+    </div>
+
+    <div class="main-section center_horizontal">
+        <div class="input-section center_vertical">
+            <div class="group">
+                <label>enter all names</label>
+                <textarea id="inputTextArea" placeholder="Enter candidate names and enjoy Raffle Draw"></textarea>
+            </div>
+            <div class="btn-group">
+                <button class="secondary-btn" id="enterCandidateBTN">enter</button>
+                <button class="primary-btn" id="showAllBTN">show all</button>
+            </div>
+            <div class="list_of_candidate">
+                <ul id="listOfCandidate">
+                    <!-- ist of candidates will be displayed here -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="display-section center_vertical">
+            <div class="group">
+                <label>output display</label>
+                <div style="width: 100%; height: 100%; background: white; color: black; text-align: center;">
+                    <p id="outputDisplay" style="text-transform: capitalize;">hello</p>
+                </div>
+            </div>
+            <button class="secondary-btn" id="giveTryBTN">give a try</button>
+            <div class="list_of_winner">
+                <ul>
+                    <li>
+                        <p style="text-transform: capitalize;">first winner : <span id="firstWinner"></span></p>
+                    </li>
+                    <li>
+                        <p style="text-transform: capitalize;">second winner : <span id="secondWinner"></span></p>
+                    </li>
+                    <li>
+                        <p style="text-transform: capitalize;">third winner : <span id="thirdWinner"></span></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="remaining_members">
+                <ul id="remainingMembers">
+                    <!-- Remaining members will be displayed here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
