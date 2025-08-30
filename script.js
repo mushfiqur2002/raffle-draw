@@ -81,10 +81,13 @@ giveTryBTN.addEventListener('click', () => {
 
             if (winnerCount === 0) {
                 firstWinner.innerText = winner;
+                alert(`Congratulations ${winner} the First Winner!`);
             } else if (winnerCount === 1) {
                 secondWinner.innerText = winner;
+                alert(`Congratulations ${winner} the Second Winner!`);
             } else if (winnerCount === 2) {
                 thirdWinner.innerText = winner;
+                alert(`Congratulations ${winner} the Third Winner!`);
             }
 
             // Remove winner from candidates
