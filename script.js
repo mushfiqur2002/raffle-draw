@@ -31,6 +31,8 @@ enterCandidateBTN.addEventListener('click', () => {
 
     // Add new names to candidates
     candidates.push(...names);
+    createListOfCandidate(candidates);
+    inputTextArea.value = '';
 });
 
 // Show all candidates
